@@ -1,4 +1,4 @@
-
+ 
 public abstract class ThrowCalculator {
 	
     public static ThrowCalculator makeCalculator(String difficulty) {
