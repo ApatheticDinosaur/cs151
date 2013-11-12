@@ -25,6 +25,7 @@ public class GameControllerUI extends javax.swing.JFrame {
     private int numberOfThrows;
     private String difficulty;
     private GameController g;
+    private int currentRound;
 	
 	/** Creates new form GameControllerUI */
     public GameControllerUI() {
@@ -111,7 +112,7 @@ public class GameControllerUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("");
         jLabel3.setVisible(false);
 
         jLabel4.setText("Score:");
@@ -120,10 +121,10 @@ public class GameControllerUI extends javax.swing.JFrame {
         jLabel5.setText("Computer's Prediction: ");
         jLabel5.setVisible(false);
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("");
         jLabel6.setVisible(false);
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("");
         jLabel7.setVisible(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -210,7 +211,7 @@ public class GameControllerUI extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-    	JOptionPane.showMessageDialog(this, "Choose difficulty with the difficulty drop down menu. Choose the number of rounds you will partake in the number of throws.");
+    	JOptionPane.showMessageDialog(this, "Choose difficulty with the difficulty drop down menu. Choose the number of rounds you will partake in in the number of throws.");
     }
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,24 +228,39 @@ public class GameControllerUI extends javax.swing.JFrame {
     	jLabel4.setVisible(true);
     	jLabel5.setVisible(true);
     	jLabel6.setVisible(true);
-    	numberOfThrows = Integer.parseInt(jTextField1.getSelectedText());
-    	//JOptionPane.showMessageDialog(this, numberOfThrows);
-    	if (numberOfThrows == 0)
+    	currentRound = 0;
+    	try{
+    		numberOfThrows = Integer.parseInt(jTextField1.getText());
+    	}
+    	catch (NumberFormatException nfe)
     	{
     		JOptionPane.showMessageDialog(this, "WTF DAT AINT NO NUMBER","Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
     	}
+    	difficulty = (String)jComboBox1.getSelectedItem();
     	g = new GameController(difficulty, numberOfThrows);
     	jLabel3.setText(g.getScore());
     	
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        currentRound++;
+    	jLabel7.setText(g.makeThrow(0));
+        jLabel3.setText(g.getScore());
+        if(currentRound == numberOfThrows) {
+        	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
+        	System.exit(1);
+        }
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	currentRound++;
+    	jLabel7.setText(g.makeThrow(1));
+    	jLabel3.setText(g.getScore());
+    	if(currentRound == numberOfThrows) {
+        	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
+        	System.exit(1);
+        }
     }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +268,13 @@ public class GameControllerUI extends javax.swing.JFrame {
     }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	currentRound++;
+    	jLabel7.setText(g.makeThrow(2));
+    	jLabel3.setText(g.getScore());
+    	if(currentRound == numberOfThrows) {
+        	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
+        	System.exit(1);
+        }
     }
 
     /**
