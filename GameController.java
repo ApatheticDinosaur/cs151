@@ -19,6 +19,7 @@ public class GameController {
     private ScoreKeeper sk = new ScoreKeeper();
     private Human h = new Human();
     private ThrowCalculator calc;
+    private int computerResponse;
 	
 	public GameController(String diff, int t) {
         numberOfThrows = t;
@@ -35,7 +36,7 @@ public class GameController {
 
             //Stores in Group of 3, the RPS and adds it a to hash table which records the counts of that RPS value.
 
-            int computerResponse = calc.calculateThrow(humanResponse);
+			computerResponse = calc.calculateThrow(humanResponse);
 
 
             if (humanResponse == computerResponse) {
@@ -53,5 +54,15 @@ public class GameController {
 	
 	public String getScore() {
 		return sk.showScore();
+	}
+	
+	public String getPredictedThrow()
+	{
+		if(computerResponse == 0)
+			return "Scissors";
+		else if(computerResponse == 1)
+			return "Rock";
+		else
+			return "Paper";	
 	}
 }

@@ -141,15 +141,16 @@ public class GameControllerUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(116, 116, 116))
+                        .addGap(80, 80, 80))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -161,18 +162,17 @@ public class GameControllerUI extends javax.swing.JFrame {
                         .addGap(41, 41, 41))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -180,12 +180,12 @@ public class GameControllerUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -208,14 +208,14 @@ public class GameControllerUI extends javax.swing.JFrame {
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton5))
-                .addGap(29, 29, 29))
+                    .addComponent(jButton5)
+                    .addComponent(jButton1))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(500, 400);
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,6 +247,11 @@ public class GameControllerUI extends javax.swing.JFrame {
     		JOptionPane.showMessageDialog(this, "WTF DAT AINT NO NUMBER","Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
     	}
+    	if(numberOfThrows == 0)
+    	{
+    		JOptionPane.showMessageDialog(this, "Okay fine, don't play our game...","Error", JOptionPane.ERROR_MESSAGE);
+            System.exit(1);
+    	}
     	difficulty = (String)jComboBox1.getSelectedItem();
     	g = new GameController(difficulty, numberOfThrows);
     	jLabel3.setText(g.getScore());
@@ -257,6 +262,7 @@ public class GameControllerUI extends javax.swing.JFrame {
         currentRound++;
     	jLabel7.setText(g.makeThrow(0));
         jLabel3.setText(g.getScore());
+        jLabel6.setText(g.getPredictedThrow());
         if(currentRound == numberOfThrows) {
         	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
         	System.exit(1);
@@ -267,6 +273,7 @@ public class GameControllerUI extends javax.swing.JFrame {
     	currentRound++;
     	jLabel7.setText(g.makeThrow(1));
     	jLabel3.setText(g.getScore());
+        jLabel6.setText(g.getPredictedThrow());
     	if(currentRound == numberOfThrows) {
         	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
         	System.exit(1);
@@ -281,6 +288,7 @@ public class GameControllerUI extends javax.swing.JFrame {
     	currentRound++;
     	jLabel7.setText(g.makeThrow(2));
     	jLabel3.setText(g.getScore());
+        jLabel6.setText(g.getPredictedThrow());
     	if(currentRound == numberOfThrows) {
         	JOptionPane.showMessageDialog(this, "Final Score: " + g.getScore());
         	System.exit(1);
@@ -306,7 +314,7 @@ public class GameControllerUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3; //Current Score
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6; //Computer's choice
+    private javax.swing.JLabel jLabel6; //Computer's prediction
     private javax.swing.JLabel jLabel7; //Win or lose
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jButton2;

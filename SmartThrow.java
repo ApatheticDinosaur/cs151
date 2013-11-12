@@ -1,5 +1,7 @@
 import java.util.Hashtable;
 
+import javax.sql.rowset.Predicate;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -16,6 +18,7 @@ public class SmartThrow extends ThrowCalculator{
     int previousComputerThrow = -1;
     int currentHumanThrow = -1;
     int computerResponse;
+    int predictedHumanThrow = 0;
 
     
 	@Override
@@ -33,10 +36,9 @@ public class SmartThrow extends ThrowCalculator{
             }
             }
         
-        System.out.println(throwCount);
 
         int maxCount = 0;
-        int predictedHumanThrow = 0;
+        
         //ADD DAT ALGORITHM (determine what the computer's response is)
         for (int i=0; i<3;i++)
         {
@@ -65,5 +67,7 @@ public class SmartThrow extends ThrowCalculator{
         return computerResponse;
        
     }
+	
+	
 
 }
