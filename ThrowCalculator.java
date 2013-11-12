@@ -1,6 +1,6 @@
- 
+
 public abstract class ThrowCalculator {
-	
+
     public static ThrowCalculator makeCalculator(String difficulty) {
         if (difficulty.equalsIgnoreCase("random")) {
             return new RandomThrow();

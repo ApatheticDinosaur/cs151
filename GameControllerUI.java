@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
                                                                      
                                                                      
                                                                      
@@ -22,6 +24,7 @@ public class GameControllerUI extends javax.swing.JFrame {
 
     private int numberOfThrows;
     private String difficulty;
+    private GameController g;
 	
 	/** Creates new form GameControllerUI */
     public GameControllerUI() {
@@ -40,10 +43,10 @@ public class GameControllerUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton4 = new javax.swing.JToggleButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -77,34 +80,34 @@ public class GameControllerUI extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton1.setText("Rock");
-        jToggleButton1.setVisible(false);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("Rock");
+        jButton2.setVisible(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setText("Paper");
-        jToggleButton2.setVisible(false);
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("Paper");
+        jButton3.setVisible(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setText("Scissors");
-        jToggleButton3.setVisible(false);
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setText("Scissors");
+        jButton4.setVisible(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
 
-        jToggleButton4.setText("Start");
-        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setText("Start");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton4ActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -141,7 +144,7 @@ public class GameControllerUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,15 +152,15 @@ public class GameControllerUI extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(23, 23, 23))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jToggleButton4)
+                                                .addComponent(jButton5)
                                                 .addGap(34, 34, 34))))
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(3, 3, 3))
@@ -193,13 +196,13 @@ public class GameControllerUI extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2)
-                    .addComponent(jToggleButton3))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jToggleButton4))
+                    .addComponent(jButton5))
                 .addContainerGap())
         );
 
@@ -207,40 +210,48 @@ public class GameControllerUI extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	JOptionPane.showMessageDialog(this, "Choose difficulty with the difficulty drop down menu. Choose the number of rounds you will partake in the number of throws.");
     }
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
     	difficulty = (String)jComboBox1.getSelectedItem();
     }
 
-    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jToggleButton1.setVisible(true);
-    	jToggleButton2.setVisible(true);
-    	jToggleButton3.setVisible(true);
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+    	jButton2.setVisible(true);
+    	jButton3.setVisible(true);
+    	jButton4.setVisible(true);
     	jComboBox1.setEnabled(false);
     	jTextField1.setEnabled(false);
     	jLabel3.setVisible(true);
     	jLabel4.setVisible(true);
     	jLabel5.setVisible(true);
     	jLabel6.setVisible(true);
-    	numberOfThrows = jTextField1.getSelectedText();
+    	numberOfThrows = Integer.parseInt(jTextField1.getSelectedText());
+    	//JOptionPane.showMessageDialog(this, numberOfThrows);
+    	if (numberOfThrows == 0)
+    	{
+    		JOptionPane.showMessageDialog(this, "WTF DAT AINT NO NUMBER","Error", JOptionPane.ERROR_MESSAGE);
+            System.exit(1);
+    	}
+    	g = new GameController(difficulty, numberOfThrows);
+    	jLabel3.setText(g.getScore());
     	
     }
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jToggleButton4ActionPerformed(evt);
+    	jButton5ActionPerformed(evt);
     }
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -266,10 +277,10 @@ public class GameControllerUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6; //Computer's choice
     private javax.swing.JLabel jLabel7; //Win or lose
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     // End of variables declaration
 
 }
